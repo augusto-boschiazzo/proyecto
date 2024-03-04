@@ -32,9 +32,9 @@ patron = [
 matcher.add("EXAMINAN", [patron])
 matches = matcher(nlp(doc))
 
-print(matches)
+
 for j in range(len(matches)):
-    print("Coincidencia numero ", j)
+    print("Coincidencia numero ", j+1)
     match_id, token_ids = matches[j]
     for i in range(len(token_ids)):
         print(patron[i]["RIGHT_ID"] + ":", doc[token_ids[i]].text)
